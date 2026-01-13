@@ -47,7 +47,7 @@ function Hero() {
     return (
         <header className="viewport-content" 
         style={{
-        backgroundImage: "url(src/assets/pictures/PokedexHomepage.png)", 
+        backgroundImage:  `url(${import.meta.env.BASE_URL}pictures/PokedexHomepage.png)`, 
         backgroundRepeat: "no-repeat", 
         backgroundSize: "cover",
         backgroundPosition: "50% 50%",
@@ -207,7 +207,7 @@ function Research() {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
             >
-                <motion.img src="src/assets/pictures/pokedexerdiagram.PNG" alt="ER Diagram for the Database Schema" variants={item}/>
+                <motion.img src={`${import.meta.env.BASE_URL}pictures/pokedexerdiagram.png`} alt="ER Diagram for the Database Schema" variants={item}/>
             </motion.div>
         </section>
     )
@@ -229,7 +229,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/pokedexfeature1.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/pokedexfeature1.png`} 
                     alt="Feature 1"
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -258,7 +258,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/pokedexfeature2.PNG" 
+                    src={`${import.meta.env.BASE_URL}pictures/pokedexfeature2.png`} 
                     alt="Feature 2" 
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -269,7 +269,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/pokedexfeature3.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/pokedexfeature3.png`} 
                     alt="Feature 3" 
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -298,7 +298,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/pokedexfeature4.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/pokedexfeature4.png`} 
                     alt="Feature 4" 
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -309,7 +309,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/pokedexfeature5.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/pokedexfeature5.png`} 
                     alt="Feature 5" 
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -338,7 +338,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/pokedexfeature6.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/pokedexfeature6.png`} 
                     alt="Feature 6" 
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -349,7 +349,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/pokedexfeature7.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/pokedexfeature7.png`} 
                     alt="Feature 7" 
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -378,7 +378,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/pokedexfeature8.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/pokedexfeature8.png`} 
                     alt="Feature 8" 
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -389,7 +389,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/pokedexfeature9.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/pokedexfeature9.png`} 
                     alt="Feature 9" 
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -418,7 +418,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/pokedexfeature10.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/pokedexfeature10.png`} 
                     alt="Feature 10" 
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -468,7 +468,7 @@ function Development() {
                     <p className="left-column-text">Despite these challenges, the final product is fully functional and successfully integrates all 10 features.</p>
                 </div>
                 <motion.video 
-                src="src/assets/videos/PokedexDemo.mov" 
+                src={`${import.meta.env.BASE_URL}videos/PokedexDemo.mov`} 
                 alt="Demo Video" 
                 initial={{opacity: 0, y: 40}}
                 whileInView={{opacity: 1, y: 0}}

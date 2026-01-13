@@ -48,7 +48,7 @@ function Hero() {
     return (
         <header className="viewport-content" 
         style={{
-        backgroundImage: "url(src/assets/pictures/aboutpagehero.png)", 
+        backgroundImage: `url(${import.meta.env.BASE_URL}pictures/aboutpagehero.png)`, 
         backgroundRepeat: "no-repeat", 
         backgroundSize: "cover",
         backgroundPosition: "50% 50%",
@@ -230,10 +230,10 @@ function Research() {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
             >
-                    <motion.img src="src/assets/pictures/StudioSpielen.png" alt="Studio Spielen Homepage Image" variants={item} style={{padding: "2px", backgroundColor: "#222222"}}/>
-                    <motion.img src="src/assets/pictures/Mod.png" alt="Mod Creative Studio Homepage Image" variants={item} style={{padding: "4px", backgroundColor: "#ffffff"}}/>
-                    <motion.img src="src/assets/pictures/TonyJin.png" alt="Tony Jin Homepage Image" variants={item} style={{padding: "4px", backgroundColor: "#ffffff"}}/>
-                    <motion.img src="src/assets/pictures/AbdulrahmanSaied.png" alt="Abdulrahman Saied Homepage Image" variants={item} style={{padding: "2px", backgroundColor: "#222222"}}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/StudioSpielen.png`} alt="Studio Spielen Homepage Image" variants={item} style={{padding: "2px", backgroundColor: "#222222"}}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/Mod.png`} alt="Mod Creative Studio Homepage Image" variants={item} style={{padding: "4px", backgroundColor: "#ffffff"}}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/TonyJin.png`} alt="Tony Jin Homepage Image" variants={item} style={{padding: "4px", backgroundColor: "#ffffff"}}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/AbdulrahmanSaied.png`} alt="Abdulrahman Saied Homepage Image" variants={item} style={{padding: "2px", backgroundColor: "#222222"}}/>
             </motion.div>
         </section>
     )
@@ -250,10 +250,10 @@ function Wireframing() {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
             >
-                    <motion.img src="src/assets/pictures/workswireframe.png" alt="Project Card Wireframe" variants={item}/>
-                    <motion.img src="src/assets/pictures/aboutpageherowireframe.png" alt="About Page Hero Wireframe" variants={item}/>
-                    <motion.img src="src/assets/pictures/worksherowireframe.png" alt="Project Hero Wireframe" variants={item}/>
-                    <motion.img src="src/assets/pictures/projectsummarywireframe.png" alt="Project Summary Section Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/workswireframe.png`} alt="Project Card Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/aboutpageherowireframe.png`} alt="About Page Hero Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/worksherowireframe.png`} alt="Project Hero Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/projectsummarywireframe.png`} alt="Project Summary Section Wireframe" variants={item}/>
             </motion.div>
         </section>
     )
@@ -276,7 +276,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/workimage.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/workimage.png`} 
                     alt="Homepage Work Image"
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -315,7 +315,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/aboutpageheroimage.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/aboutpageheroimage.png`} 
                     alt="About Page Hero Image"
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -326,7 +326,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/aboutpageintro.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/aboutpageintro.png`} 
                     alt="About Page Intro Image"
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -366,7 +366,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/projectsummary.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/projectsummary.png`} 
                     alt="Project Summary Image"
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -417,7 +417,7 @@ function Development() {
                     <p className="left-column-text">Despite these challenges, the final product is fully functional and closely matches the original design intent.</p>
                 </div>
                 <motion.video 
-                src="src/assets/videos/PortfolioDemo.mp4" 
+                src={`${import.meta.env.BASE_URL}videos/PortfolioDemo.mp4`} 
                 alt="Portfolio Demo Video" 
                 initial={{opacity: 0, y: 40}}
                 whileInView={{opacity: 1, y: 0}}

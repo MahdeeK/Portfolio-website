@@ -32,7 +32,7 @@ function HeroNav() {
                             <ul className="mobile-nav">
                                 <li><NavLink to="/" className={({ isActive }) => isActive ? 'link-active' : 'link-standard'}>Home</NavLink></li>
                                 <li><NavLink to="/about" className={({ isActive }) => isActive ? 'link-active' : 'link-standard'}>About</NavLink></li>
-                                <li><a href="src/assets/Mahdee_Khandokar_Resume.pdf" target="_blank">Resume</a></li>
+                                <li><a href={`${import.meta.env.BASE_URL}Mahdee_Khandokar_Resume.pdf`} target="_blank" rel="noreferrer">Resume</a></li>
                                 <li><a href="https://www.linkedin.com/in/mahdee-khandokar/" target="_blank">LinkedIn</a></li>
                                 <li><a href="https://github.com/MahdeeK" target="_blank">GitHub</a></li>
                                 <li><a href="mailto:mahdee.khandokar@gmail.com">Contact</a></li>

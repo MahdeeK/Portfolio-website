@@ -11,7 +11,7 @@ function WorksItem({ project }) {
         viewport={{ once: true, amount: 0.2 }}
         >
             <div className="work-image-container">
-                <img className="work-image" src={project.video} alt={project.alt} />
+                <img className="work-image" src={project.image} alt={project.alt} />
             </div>
                 <h1 className="work-title">{project.title}</h1>
                 <p className="work-tags">{project.tags}</p>

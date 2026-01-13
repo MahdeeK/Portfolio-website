@@ -48,7 +48,7 @@ function Hero() {
     return (
         <header className="viewport-content" 
         style={{
-        backgroundImage: "url(src/assets/pictures/receiptlyimage.png)", 
+        backgroundImage: `url(${import.meta.env.BASE_URL}pictures/receiptlyimage.png)`, 
         backgroundRepeat: "no-repeat", 
         backgroundSize: "cover",
         backgroundPosition: "50% 50%",
@@ -217,8 +217,8 @@ function Research() {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
             >
-                    <motion.img src="src/assets/pictures/intuit.png" alt="Intuit Homepage Image" variants={item}/>
-                    <motion.img src="src/assets/pictures/expensify.png" alt="Expensify Homepage Image" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/intuit.png`} alt="Intuit Homepage Image" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/expensify.png`} alt="Expensify Homepage Image" variants={item}/>
             </motion.div>
         </section>
     )
@@ -235,14 +235,14 @@ function Wireframing() {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
             >
-                    <motion.img src="src/assets/pictures/receiptlyhomewireframe.png" alt="something" variants={item}/>
-                    <motion.img src="src/assets/pictures/receiptlysigninwireframe.png" alt="something" variants={item}/>
-                    <motion.img src="src/assets/pictures/receiptlydashboardwireframe.png" alt="something" variants={item}/>
-                    <motion.img src="src/assets/pictures/receiptlyexpenseswireframe.png" alt="something" variants={item}/>
-                    <motion.img src="src/assets/pictures/receiptlypreviewwireframe.png" alt="something" variants={item}/>
-                    <motion.img src="src/assets/pictures/receiptlygallerywireframe.png" alt="something" variants={item}/>
-                    <motion.img src="src/assets/pictures/receiptlybudgetswireframe.png" alt="something" variants={item}/>
-                    <motion.img src="src/assets/pictures/receiptlyreceiptwireframe.png" alt="something" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/receiptlyhomewireframe.png`} alt="something" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/receiptlysigninwireframe.png`} alt="something" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/receiptlydashboardwireframe.png`} alt="something" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/receiptlyexpenseswireframe.png`} alt="something" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/receiptlypreviewwireframe.png`} alt="something" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/receiptlygallerywireframe.png`} alt="something" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/receiptlybudgetswireframe.png`} alt="something" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/receiptlyreceiptwireframe.png`} alt="something" variants={item}/>
             </motion.div>
         </section>
     )
@@ -265,7 +265,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image mobile-design" 
-                    src="src/assets/pictures/receiptlydashboard.webp" 
+                    src={`${import.meta.env.BASE_URL}pictures/receiptlydashboard.webp`}
                     alt="About Page Intro Image"
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -304,7 +304,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image mobile-design" 
-                    src="src/assets/pictures/receiptlyexpenses.webp" 
+                    src={`${import.meta.env.BASE_URL}pictures/receiptlyexpenses.webp`} 
                     alt="Project Summary Image"
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -315,7 +315,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image mobile-design" 
-                    src="src/assets/pictures/receiptlyreceiptimage.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/receiptlyreceiptimage.png`} 
                     alt="About Page Intro Image"
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -354,7 +354,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image mobile-design" 
-                    src="src/assets/pictures/receiptlybudgets.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/receiptlybudgets.png`} 
                     alt="Project Summary Image"
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -365,7 +365,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image mobile-design" 
-                    src="src/assets/pictures/receiptlysettings.webp" 
+                    src={`${import.meta.env.BASE_URL}pictures/receiptlysettings.webp`} 
                     alt="About Page Intro Image"
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -403,7 +403,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image mobile-design" 
-                    src="src/assets/pictures/receiptlyreceipt.webp" 
+                    src={`${import.meta.env.BASE_URL}pictures/receiptlyreceipt.webp`} 
                     alt="Project Summary Image"
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -453,7 +453,7 @@ function Development() {
                     <p className="left-column-text">Despite these challenges, the product is technically feasible and looks pleasing using the original design.</p>
                 </div>
                 <motion.video 
-                src="src/assets/videos/PokedexDemo.mov" 
+                src={`${import.meta.env.BASE_URL}videos/PokedexDemo.mov`} 
                 alt="something" 
                 initial={{opacity: 0, y: 40}}
                 whileInView={{opacity: 1, y: 0}}

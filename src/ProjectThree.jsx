@@ -47,7 +47,7 @@ function Hero() {
     return (
         <header className="viewport-content" 
         style={{
-        backgroundImage: "url(src/assets/pictures/rocksteady.png)", 
+        backgroundImage: `url(${import.meta.env.BASE_URL}pictures/rocksteady.png)`, 
         backgroundRepeat: "no-repeat", 
         backgroundSize: "cover",
         backgroundPosition: "50% 50%",
@@ -204,10 +204,10 @@ function Research() {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
             >
-                    <motion.img src="src/assets/pictures/Suckerpunch.png" alt="Suckerpunch Productions Website Hero" variants={item}/>
-                    <motion.img src="src/assets/pictures/Insomniac.png" alt="Insomniac Games Website Hero" variants={item}/>
-                    <motion.img src="src/assets/pictures/RocksteadyHome.png" alt="Rocksteady Studios Website Hero" variants={item}/>
-                    <motion.img src="src/assets/pictures/Ubisoft.png" alt="Ubisoft Website Hero" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/Suckerpunch.png`} alt="Suckerpunch Productions Website Hero" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/Insomniac.png`} alt="Insomniac Games Website Hero" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/RocksteadyHome.png`} alt="Rocksteady Studios Website Hero" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/Ubisoft.png`} alt="Ubisoft Website Hero" variants={item}/>
             </motion.div>
         </section>
     )
@@ -224,12 +224,12 @@ function Wireframing() {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
             >
-                    <motion.img src="src/assets/pictures/rocksteadyhomewireframe.png" alt="Homepage Hero Wireframe" variants={item}/>
-                    <motion.img src="src/assets/pictures/rocksteadyvalueswireframe.png" alt="Values Wireframe" variants={item}/>
-                    <motion.img src="src/assets/pictures/rocksteadystudiowireframe.png" alt="Studio Page Hero Wireframe" variants={item}/>
-                    <motion.img src="src/assets/pictures/rocksteadysocialwireframe.png" alt="Social Life Wireframe" variants={item}/>
-                    <motion.img src="src/assets/pictures/rocksteadypartnerswireframe.png" alt="Partners Wireframe" variants={item}/>
-                    <motion.img src="src/assets/pictures/rocksteadygamewireframe.png" alt="Game Page Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/rocksteadyhomewireframe.png`} alt="Homepage Hero Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/rocksteadyvalueswireframe.png`} alt="Values Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}picturess/rocksteadystudiowireframe.png`} alt="Studio Page Hero Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/rocksteadysocialwireframe.png`} alt="Social Life Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/rocksteadypartnerswireframe.png`} alt="Partners Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/rocksteadygamewireframe.png`} alt="Game Page Wireframe" variants={item}/>
             </motion.div>
         </section>
     )
@@ -251,7 +251,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/rocksteady.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/rocksteady.png`} 
                     alt="Homepage Hero Image"
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -287,7 +287,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/rocksteadycareers.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/rocksteadycareers.png`} 
                     alt="Career Hero Image" 
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -298,7 +298,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/rocksteadystudiohero.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/rocksteadystudiohero.png`} 
                     alt="Studio Hero Image" 
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -336,7 +336,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/rocksteadygames.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/rocksteadygames.png`} 
                     alt="Games Image" 
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -347,7 +347,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/rocksteadyperks.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/rocksteadyperks.png`} 
                     alt="Perks Section Image" 
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}

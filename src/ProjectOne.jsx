@@ -48,7 +48,7 @@ function Hero() {
     return (
         <header className="viewport-content" 
         style={{
-        backgroundImage: "url(src/assets/pictures/bmwhomepagedesign.png)", 
+        backgroundImage: `url(${import.meta.env.BASE_URL}pictures/bmwhomepagedesign.png)`, 
         backgroundRepeat: "no-repeat", 
         backgroundSize: "cover",
         backgroundPosition: "50% 50%",
@@ -239,10 +239,10 @@ function Research() {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
             >
-                    <motion.img src="src/assets/pictures/Koenigsegg.png" alt="something" variants={item}/>
-                    <motion.img src="src/assets/pictures/Bugatti.png" alt="something" variants={item}/>
-                    <motion.img src="src/assets/pictures/Porsche.png" alt="something" variants={item}/>
-                    <motion.img src="src/assets/pictures/Rolls.png" alt="something" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/Koenigsegg.png`} alt="Koenigsegg Website Hero Image" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/Bugatti.png`} alt="Bugatti Website Hero Image" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/Porsche.png`} alt="Porsche Website Hero Image" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/Rolls.png`} alt="Rolls Royce Website Hero Image" variants={item}/>
             </motion.div>
         </section>
     )
@@ -259,12 +259,12 @@ function Wireframing() {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
             >
-                    <motion.img src="src/assets/pictures/bmwhomepagewireframe.png" alt="Hero Wireframe" variants={item}/>
-                    <motion.img src="src/assets/pictures/bmwmodelwireframe.png" alt="Model Wireframe" variants={item}/>
-                    <motion.img src="src/assets/pictures/bmwvehiclewireframe.png" alt="Vehicle Wireframe" variants={item}/>
-                    <motion.img src="src/assets/pictures/bmwofferswireframe.png" alt="Offers Wireframe" variants={item}/>
-                    <motion.img src="src/assets/pictures/bmwconfigurewireframe.png" alt="Configure Wireframe" variants={item}/>
-                    <motion.img src="src/assets/pictures/bmwfooterwireframe.png" alt="Footer Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/bmwhomepagewireframe.png`} alt="Hero Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/bmwmodelwireframe.png`} alt="Model Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/bmwvehiclewireframe.png`} alt="Vehicle Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/bmwofferswireframe.png`} alt="Offers Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/bmwconfigurewireframe.png`} alt="Configure Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/bmwfooterwireframe.png`} alt="Footer Wireframe" variants={item}/>
             </motion.div>
         </section>
     )
@@ -287,7 +287,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/bmwhomepagedesign.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/bmwhomepagedesign.png`}
                     alt="BMW Homepage Hero"
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -327,7 +327,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/bmwmodels.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/bmwmodels.png`} 
                     alt="Model Carousel" 
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -338,7 +338,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/bmwvehiclesearch.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/bmwvehiclesearch.png`} 
                     alt="Vehicle Search and Test Drive Booking" 
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -376,7 +376,7 @@ function Design() {
                     </motion.div>
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/bmwoffers.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/bmwoffers.png`} 
                     alt="Current Offers" 
                     initial={{opacity: 0, x: 40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -387,7 +387,7 @@ function Design() {
                 <div className="design-item">
                     <motion.img 
                     className="design-image" 
-                    src="src/assets/pictures/bmwfooter.png" 
+                    src={`${import.meta.env.BASE_URL}pictures/bmwfooter.png`} 
                     alt="Footer" 
                     initial={{opacity: 0, x: -40}}
                     whileInView={{opacity: 1, x: 0}}
@@ -453,7 +453,7 @@ function Development() {
                     <p className="left-column-text">Despite these challenges, the final product is fully functional and closely matches the original design intent.</p>
                 </div>
                 <motion.video
-                src="src/assets/videos/BMWDemo.mp4" 
+                src={`${import.meta.env.BASE_URL}videos/BMWDemo.mp4`} 
                 alt="Demo Video" 
                 initial={{opacity: 0, y: 40}}
                 whileInView={{opacity: 1, y: 0}}

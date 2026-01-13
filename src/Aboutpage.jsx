@@ -36,7 +36,7 @@ function Hero () {
   return (
     <header className="viewport-content" 
     style={{
-      backgroundImage: "url(src/assets/pictures/aboutpagehero.png)", 
+      backgroundImage: `url(${import.meta.env.BASE_URL}pictures/aboutpagehero.png)`, 
       backgroundRepeat: "no-repeat", 
       backgroundSize: "cover",
       backgroundPosition: "50% 50%",
