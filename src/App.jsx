@@ -16,7 +16,7 @@ if (typeof window !== 'undefined' && 'scrollRestoration' in history) {
 
 function App() {
   return (
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <ReactLenis root>
           <ScrollToTop />
           <Routes>
