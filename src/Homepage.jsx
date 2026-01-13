@@ -65,7 +65,7 @@ function Works () {
         id: 5,
         title: "Pokedex",
         tags: "Full-Stack Development",
-        image: `${import.meta.env.BASE_URL}pictures/pokedexHomepage.png`,
+        image: `${import.meta.env.BASE_URL}pictures/PokedexHomepage.png`,
         alt: "Pokedex Project",
     }
 
