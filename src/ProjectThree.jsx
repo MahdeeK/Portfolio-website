@@ -226,7 +226,7 @@ function Wireframing() {
             >
                     <motion.img src={`${import.meta.env.BASE_URL}pictures/rocksteadyhomewireframe.png`} alt="Homepage Hero Wireframe" variants={item}/>
                     <motion.img src={`${import.meta.env.BASE_URL}pictures/rocksteadyvalueswireframe.png`} alt="Values Wireframe" variants={item}/>
-                    <motion.img src={`${import.meta.env.BASE_URL}picturess/rocksteadystudiowireframe.png`} alt="Studio Page Hero Wireframe" variants={item}/>
+                    <motion.img src={`${import.meta.env.BASE_URL}pictures/rocksteadystudiowireframe.png`} alt="Studio Page Hero Wireframe" variants={item}/>
                     <motion.img src={`${import.meta.env.BASE_URL}pictures/rocksteadysocialwireframe.png`} alt="Social Life Wireframe" variants={item}/>
                     <motion.img src={`${import.meta.env.BASE_URL}pictures/rocksteadypartnerswireframe.png`} alt="Partners Wireframe" variants={item}/>
                     <motion.img src={`${import.meta.env.BASE_URL}pictures/rocksteadygamewireframe.png`} alt="Game Page Wireframe" variants={item}/>
