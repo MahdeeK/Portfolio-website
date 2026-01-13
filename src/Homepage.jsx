@@ -37,21 +37,21 @@ function Works () {
         id: 1,
         title: "BMW Homepage Redesign Concept",
         tags: "UI/UX Design, Front-End Development",
-        image: `${import.meta.env.BASE_URL}pictures/bmwhomepagedesign.png`,
+        image: `${import.meta.env.BASE_URL}pictures/bmwhomepagedesign.PNG`,
         alt: "BMW Project", 
     },
     {
         id: 2,
         title: "Portfolio",
         tags: "UI/UX Design, Front-End Development",
-        image: `${import.meta.env.BASE_URL}pictures/aboutpagehero.png`,
+        image: `${import.meta.env.BASE_URL}pictures/aboutpagehero.PNG`,
         alt: "Portfolio Project",
     },
     {
         id: 3,
         title: "Rocksteady Website Redesign Concept",
         tags: "UI/UX Design",
-        image: `${import.meta.env.BASE_URL}pictures/rocksteady.png`,
+        image: `${import.meta.env.BASE_URL}pictures/rocksteady.PNG`,
         alt: "Rocksteady Project",
     },
     {
@@ -65,7 +65,7 @@ function Works () {
         id: 5,
         title: "Pokedex",
         tags: "Full-Stack Development",
-        image: `${import.meta.env.BASE_URL}pictures/pokedexHomepage.png`,
+        image: `${import.meta.env.BASE_URL}pictures/pokedexHomepage.PNG`,
         alt: "Pokedex Project",
     }
 
