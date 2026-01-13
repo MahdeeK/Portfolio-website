@@ -129,7 +129,7 @@ function Summary() {
                         </li>
                         <li className="summary-list-item">
                             <h2 className="summary-headline" style={{marginBottom: "8px"}}>Links</h2>
-                            <p style={{margin: "0px"}}><a href="https://github.com/MahdeeK/Portfolio-site" target="_blank">GitHub Repository</a></p>
+                            <p style={{margin: "0px"}}><a href="https://github.com/MahdeeK/Portfolio-website" target="_blank">GitHub Repository</a></p>
                         </li>
                     </ul>
                 </div>
