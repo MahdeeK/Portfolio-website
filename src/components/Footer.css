@@ -55,9 +55,9 @@
   }
 }
 
-.link-active {
-  color: gray;
-  text-decoration: underline;
-  cursor: default;
-  pointer-events: none;
+.footer-links li:has(.link-active) {
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+    padding-bottom: 2px;
+    cursor: default;
+    pointer-events: none;
 }

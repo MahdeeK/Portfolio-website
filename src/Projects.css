@@ -1,8 +1,8 @@
 .project-heading {
     text-align: center;
     font-size: clamp(28px, 5vw, 32px);
-    margin-bottom: 48px;
-    margin-top: 112px;
+    margin-bottom: clamp(24px, 3vw, 48px);
+    margin-top: clamp(48px, 5vw, 112px);
 }
 
 .project-subheading {
@@ -23,6 +23,16 @@
 .project-title {
     font-size: clamp(24px, 5vw, 64px);
     text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.project-title a{
+    transition: opacity 0.6s ease;
+}
+
+.project-title a:hover {
+    opacity: 0.8;
 }
 
 .project-caption {
@@ -172,8 +182,8 @@
 }
 
 .bullet-points {
-    margin-bottom: 8px;
-    text-indent: -1.2em;
+    margin-bottom: 12px;
+    text-indent: -1em;
     padding-left: 1.2em;
 }
 
@@ -203,7 +213,7 @@
     display: flex;
     align-items: center;
     gap: clamp(32px, 6vw, 64px);
-    margin-bottom: clamp(32px, 5vw, 64px);
+    margin-bottom: clamp(32px, 5vw, 88px);
 }
 
 .design-image {
@@ -282,6 +292,9 @@
         gap: 16px;
         width: 100%;
     }
+    .process-card-grid {
+        gap: 16px;
+    }
 }
 
 @media (max-width: 633px) {
@@ -305,9 +318,6 @@
 }
 
 .text-content-wrapper {
-    display: flex;
-    align-items: flex-start;
-    gap: 48px;
     width: 100%;
 }
 
@@ -318,12 +328,14 @@
 }
 
 .text-content-wrapper video {
+    display: flex;
     flex: 1 1 auto;
     min-width: 300px;
-    max-width: 45%;
-    max-height: 70vh;
+    max-width: 1300px;
+    width: 100%;
     object-fit: contain;
     border-radius: clamp(4px, 3vw, 8px);
+    margin-top: clamp(16px, 3vw, 24px);
 }
 
 @media (max-width: 1000px) {
@@ -343,4 +355,8 @@
         width: 100%;
         height: auto;
     }
+}
+
+.bottom-line {
+    margin-top: clamp(16px, 4vw, 32px);
 }

@@ -47,16 +47,16 @@ function Hero() {
     return (
         <header className="viewport-content" 
         style={{
-        backgroundImage:  `url(${import.meta.env.BASE_URL}pictures/PokedexHomepage.png)`, 
+        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url(${import.meta.env.BASE_URL}pictures/PokedexHomepage.png)`, 
         backgroundRepeat: "no-repeat", 
         backgroundSize: "cover",
         backgroundPosition: "50% 50%",
-        backgroundColor: "rgba(0, 0, 0, 0.8)",
+        backgroundColor: "rgba(0, 0, 0, 0.75)",
         backgroundBlendMode: "overlay"
         }}>
             <HeroNav />
             <div className="hero-text-container">
-                <h1 className="project-title">Pokedex</h1>
+                <h1 className="project-title"><a href="https://github.com/lolajamesw/pokedex" target="_blank">Pokedex</a></h1>
                 <p className="project-caption">
                     A comprehensive Pokédex web application developed to demonstrate advanced relational 
                     database management, featuring a custom-built MySQL schema and 10 specialized SQL-driven features.
@@ -96,7 +96,7 @@ function Summary() {
                         </p>
                     </div>
                     <p className="motivation-text">
-                        This project was an academic challenge to bridge a complex relational schema with features a real-world user would actually value. Beyond the SQL requirements, it pushed us to think like product designers—identifying meaningful features and balancing that ambition against technical feasibility. Translating these concepts into a working full-stack application required constant coordination between our normalized database logic and the user experience.
+                        This project was an academic challenge to bridge a complex relational schema with features a real-world user would actually value. Beyond the SQL requirements, it pushed us to think like product designers by identifying meaningful features and balancing that ambition against technical feasibility given the time constraint. Translating these concepts into a working full-stack application required constant coordination between our database logic, API, and UI.
                     </p>
                 </div>
                 <div className="key-stats">
@@ -151,7 +151,7 @@ function Process() {
                         <h1 className="process-card-number">02</h1>
                         <h1 className="process-card-title">Schema Design</h1>
                     </div>
-                    <p className="process-card-text">Mapping the Entity-Relationship (ER) diagram to ensure 3rd Normal Form (3NF) compliance to avoid data redundancy.</p>
+                    <p className="process-card-text">Mapping the Entity-Relationship (ER) diagram to ensure all requirements were met and avoid data redundancy.</p>
                 </motion.div>
                 <motion.div className="process-card" variants={item}>
                     <div className="card-title-container">
@@ -177,14 +177,14 @@ function Research() {
         <section className="content-container">
             <h1 className="project-heading">Technical Planning & Architecture</h1>
             <p className="research-intro">
-                Before writing a single line of code, my team developed a formal project proposal and technical report to map out the system’s logic and satisfy the course's rigorous requirements. This phase was critical for defining how a massive dataset of Pokémon, types, abilities, and moves would interact within a relational environment.
+                Before writing a single line of code, my team developed a formal project proposal and technical report to map out the system’s logic and satisfy the project requirements. This phase was critical for defining how a massive dataset of Pokémon, types, abilities, and moves would interact within a relational environment.
             </p>
             <div className="key-insights-container">
                 <h1 className="project-subheading">Key Decisions & Insights</h1>
                 <div className="two-column-grid">
                     <ul className="bulleted-list">
                         <li className="bullet-points">
-                            <span className="bullet-heading">Comprehensive Feature Scoping:</span> We drafted a detailed proposal outlining 10 core features, carefully balancing 5 basic queries (standard filtering) with 5 advanced queries (joins and aggregations) to demonstrate a full range of SQL proficiency.
+                            <span className="bullet-heading">Comprehensive Feature Scoping:</span> We drafted a detailed proposal outlining 10 core features, carefully balancing 5 basic queries with 5 advanced queries to demonstrate a full range of SQL proficiency.
                         </li>
                         <li className="bullet-points" style={{marginBottom: "0px"}}>
                             <span className="bullet-heading">Schema Design & Normalization:</span> I helped design the Entity-Relationship (ER) diagram to visualize the connections (many-to-many, one-to-many, etc.) between different entities that we would require in our schema. We then translated this into a relational schema to ensure data integrity and ease of translating it to SQL.
@@ -243,7 +243,14 @@ function Design() {
                     viewport={{ once: true, amount: 0 }}
                     >
                         <h1 className="design-item-title">Dynamic Pokédex Index</h1>
-                        <p className="design-item-text">An ordered list of Pokémon with stats and real-time "Caught" tags based on user data.</p>
+                        <p className="design-item-text">
+                            I developed a grid system that serves as a central hub for exploring the entire 
+                            Pokémon database, displaying real-time metadata like stats, types, and caught status indicators.
+                            To ensure seamless navigation, I implemented a search and sorting engine that allows users 
+                            to filter the collection by various attributes or capture history. This interface provides
+                            a smooth experience for users to discover and organize Pokémon across the entire 
+                            ecosystem.
+                        </p>
                     </motion.div>
                 </div>
                 <div className="design-item flipped-design">
@@ -253,8 +260,14 @@ function Design() {
                     transition={{duration: 0.7, ease: "easeInOut"}}
                     viewport={{ once: true, amount: 0 }}
                     >
-                        <h1>Manual Entry & Draft Persistence</h1>
-                        <p className="design-item-text">A feature for users to add caught Pokémon with nicknames and levels; incomplete entries are cached to prevent data loss.</p>
+                        <h1 className="design-item-title">Manual Entry & Draft Persistence</h1>
+                        <p className="design-item-text">
+                            I developed an intuitive entry system that allows users to manually add Pokémon to their 
+                            collection via a custom modal. To enhance the user experience, I implemented state persistence 
+                            within the modal, ensuring that any entered data is preserved even if the user accidentally closes 
+                            it. Once a capture is confirmed, the app triggers a notification banner and immediately updates 
+                            both the personal collection and the global caught tags.
+                        </p>
                     </motion.div>
                     <motion.img 
                     className="design-image" 
@@ -282,8 +295,14 @@ function Design() {
                     transition={{duration: 0.7, ease: "easeInOut"}}
                     viewport={{ once: true, amount: 0 }}
                     >
-                        <h1>Collection Management</h1>
-                        <p className="design-item-text">Logic for favoriting or adding Pokémon to a "Best 6" team, with SQL-level count checks to enforce slot limits.</p>
+                        <h1 className="design-item-title">Collection Management</h1>
+                        <p className="design-item-text">
+                            We implemented a profile-driven system that allows users to favorite Pokémon or assign them to a
+                            six-member team or showcase. To ensure a balanced user experience, we developed conditional logic 
+                            that dynamically disables selection once the six-slot limit is reached. The interface reflects 
+                            these changes in real-time, synchronizing the user's team across their profile and the global 
+                            Pokédex.
+                        </p>
                     </motion.div>
                 </div>
                 <div className="design-item flipped-design">
@@ -293,8 +312,14 @@ function Design() {
                     transition={{duration: 0.7, ease: "easeInOut"}}
                     viewport={{ once: true, amount: 0 }}
                     >
-                        <h1>Real-Time User Discovery</h1>
-                        <p className="design-item-text">A search function allowing users to find others by Username or uID to view profiles and trade history.</p>
+                        <h1 className="design-item-title">Real-Time User Discovery</h1>
+                        <p className="design-item-text">
+                            I built a real-time search interface that allows users to instantly locate other users
+                            by username or user ID. I developed the routing system that populates profiles 
+                            with specific user data, including their total Pokémon, trade history, and active Pokémon 
+                            team. This feature bridges individual collections into a social ecosystem, allowing users to 
+                            explore and compare progress across the platform.
+                        </p>
                     </motion.div>
                     <motion.img 
                     className="design-image" 
@@ -322,8 +347,14 @@ function Design() {
                     transition={{duration: 0.7, ease: "easeInOut"}}
                     viewport={{ once: true, amount: 0 }}
                     >
-                        <h1>Trade History Tracking</h1>
-                        <p className="design-item-text">A granular view that identifies every instance where a specific Pokémon was listed or offered in a trade.</p>
+                        <h1 className="design-item-title">Trade History Tracking</h1>
+                        <p className="design-item-text">
+                            We implemented a detailed trade history feature that tracks the lifecycle of each Pokémon as it 
+                            moves between users. Users can access a dedicated trades tab to view specific transaction 
+                            details, such as the date of exchange, involved users, and descriptive notes for each trade. This
+                            creates a robust audit trail that adds a layer of depth and history to every Pokémon in the 
+                            database.
+                        </p>
                     </motion.div>
                 </div>
                 <div className="design-item flipped-design">
@@ -333,8 +364,14 @@ function Design() {
                     transition={{duration: 0.7, ease: "easeInOut"}}
                     viewport={{ once: true, amount: 0 }}
                     >
-                        <h1>Strongest Counter Algorithm</h1>
-                        <p className="design-item-text">A battle-logic query that analyzes an opponent's type and returns the strongest counter from the user's specific collection.</p>
+                        <h1 className="design-item-title">Strongest Counter Algorithm</h1>
+                        <p className="design-item-text">
+                            We implemented a counter Pokémon feature that dynamically analyzes a user's collection to find 
+                            the best responses to any Pokémon in the database. By comparing type-weaknesses and stat 
+                            distributions, the system suggests the most effective counters currently available in the user's 
+                            Pokédex. This provides a strategic utility that helps users leverage their specific catches for 
+                            competitive scenarios.
+                        </p>
                     </motion.div>
                     <motion.img 
                     className="design-image" 
@@ -362,8 +399,14 @@ function Design() {
                     transition={{duration: 0.7, ease: "easeInOut"}}
                     viewport={{ once: true, amount: 0 }}
                     >
-                        <h1>Team Effectiveness Summary</h1>
-                        <p className="design-item-text">An aggregation query that calculates the average attack and defense multipliers for a user’s entire team against all 18 types.</p>
+                        <h1 className="design-item-title">Team Effectiveness Summary</h1>
+                        <p className="design-item-text">
+                            We implemented a team type effectiveness summary on the user profile to provide a holistic view 
+                            of a user's competitive standing. By calculating offensive and defensive multipliers across 
+                            all Pokémon types, the system generates a strategic dashboard that highlights how well a specific 
+                            team can perform against any opponent. This feature helps users identify gaps in their coverage 
+                            and optimize their team composition for better balance.
+                        </p>
                     </motion.div>
                 </div>
                 <div className="design-item flipped-design">
@@ -373,8 +416,14 @@ function Design() {
                     transition={{duration: 0.7, ease: "easeInOut"}}
                     viewport={{ once: true, amount: 0 }}
                     >
-                        <h1>Global Marketplace</h1>
-                        <p className="design-item-text">A multi-tab trading system (Listings, My Listings, Create Listing) requiring complex state management across multiple tables.</p>
+                        <h1 className="design-item-title">Global Marketplace</h1>
+                        <p className="design-item-text">
+                            We implemented a global marketplace where users can post Pokémon for trade and manage 
+                            their active listings. The system supports multi-user negotiation, allowing users to 
+                            submit offers on available listings which the original poster can then review and accept to 
+                            trigger an automatic ownership swap. This feature creates a seamless, end-to-end trading 
+                            experience that bridges the gap between individual collections and the wider community.
+                        </p>
                     </motion.div>
                     <motion.img 
                     className="design-image" 
@@ -402,8 +451,14 @@ function Design() {
                     transition={{duration: 0.7, ease: "easeInOut"}}
                     viewport={{ once: true, amount: 0 }}
                     >
-                        <h1>Authenticated User Accounts</h1>
-                        <p className="design-item-text">A secure login/sign-up system with data validation that gates user-specific features like "My Pokémon" and "Trades."</p>
+                        <h1 className="design-item-title">Authenticated User Accounts</h1>
+                        <p className="design-item-text">
+                           I developed a user authentication system by implementing custom SQL logic to validate user credentials
+                           and manage account access. By matching unique string identifiers within the database, I ensured 
+                           that each user is correctly mapped to their personal Pokémon collection and profile data. This 
+                           provides a functional entry point that maintains data integrity and persistence for every user
+                           in the system.
+                        </p>
                     </motion.div>
                 </div>
                 <div className="design-item flipped-design">
@@ -414,7 +469,12 @@ function Design() {
                     viewport={{ once: true, amount: 0 }}
                     >
                         <h1 className="design-item-title">Multi-Join Species Intelligence</h1>
-                        <p className="design-item-text">A deep-dive view that pulls data from moves, evolution lines, and effectiveness tables into one comprehensive Pokémon profile.</p>
+                        <p className="design-item-text">
+                            We implemented an expansive Pokémon Detail page that serves as a deep-dive encyclopedia for every 
+                            Pokémon in the database. Through a tabbed navigation system, we organized various data points including 
+                            evolution lineages, comprehensive move lists, and stat distributions. We also integrated type-effectiveness 
+                            providing users with the necessary data to make informed decisions for their teams.
+                        </p>
                     </motion.div>
                     <motion.img 
                     className="design-image" 
@@ -436,7 +496,7 @@ function Development() {
             <h1 className="project-heading">Development</h1>
             <div className="text-content-wrapper">
                 <div className="development-text">
-                    <p>My work focused on building the "core" of the application—from the visual template to the critical authentication and data-entry systems that made the app functional for users.</p>
+                    <p>My work focused on building the core of the application including the initial visual template, authentication, data-entry systems, and some of the proposed features to make the app functional for users.</p>
                     <div className="implementation-highlights">
                         <h1 className="project-subheading">Implementation Highlights</h1>
                         <ul className="bulleted-list">
@@ -444,40 +504,43 @@ function Development() {
                                     <span className="bullet-heading">Full-Stack Bridge:</span> I engineered the connection between the React frontend and the MySQL database via a Node.js API, ensuring data flowed correctly from the server to the UI.
                                 </li>
                                 <li className="bullet-points">
-                                    <span className="bullet-heading">Authentication Infrastructure:</span> I developed the Login and Account Creation pages from scratch, implementing the logic to validate user data and redirect successfully authenticated users to the Pokédex.
+                                    <span className="bullet-heading">Authentication Infrastructure:</span> I developed the login and account creation pages from scratch, implementing the logic to validate user data and redirect successfully authenticated users to the Pokédex.
                                 </li>
                                 <li className="bullet-points">
-                                    <span className="bullet-heading">Manual Entry System:</span> I built the feature that allows users to add caught Pokémon, including a "persistence" logic that saves draft data if a user cancels, ensuring a seamless user experience.
+                                    <span className="bullet-heading">Manual Entry System:</span> I built the feature that allows users to add caught Pokémon, including logic that saves draft data if a user cancels, ensuring a seamless user experience.
                                 </li>
                         </ul>
                     </div>
+                    </div>
+                    <motion.video 
+                    src={`${import.meta.env.BASE_URL}videos/PokedexDemo.mov`} 
+                    alt="Demo Video" 
+                    initial={{opacity: 0, y: 40}}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{duration: 0.7, ease: "easeInOut"}}
+                    viewport={{ once: true, amount: 0.3 }}
+                    playsInline
+                    muted
+                    autoPlay
+                    controls
+                    />
+                    <div className="development-text">
                     <div className="technical-challenges">
                         <h1 className="project-subheading">Technical Challenges</h1>
                         <ul className="bulleted-list">
                                 <li className="bullet-points">
-                                    <span className="bullet-heading">Real-Time Social Search:</span> Implementing the User Search page required balancing alphanumeric uIDs and string usernames to provide instantaneous, filtered results as the user typed.
+                                    <span className="bullet-heading">Real-Time Social Search:</span> Implementing the user search page required balancing alphanumeric uIDs and string usernames to provide instantaneous, filtered results as the user typed.
                                 </li>
                                 <li className="bullet-points">
-                                    <span className="bullet-heading">State Management in Forms:</span> Managing the state for the manual entry feature was difficult; I had to ensure that custom fields like "nicknames" and "levels" were correctly associated with the correct Pokémon ID in the database.
+                                    <span className="bullet-heading">State Management in Forms:</span> Managing the state for the manual entry feature was difficult; I had to ensure that custom fields like nicknames and levels were correctly associated with the correct Pokémon ID in the database.
                                 </li>
                                 <li className="bullet-points">
-                                    <span className="bullet-heading">Cross-Stack Troubleshooting: </span> Connecting a React frontend to a MySQL database introduced several "handshake" issues (CORS, async/await timing) that I had to resolve to ensure the app felt responsive.
+                                    <span className="bullet-heading">Cross-Stack Troubleshooting: </span> Connecting a React frontend to a MySQL database introduced several issues (CORS, async/await timing) that I had to resolve to ensure the app functioned as expected and felt responsive.
                                 </li>
                         </ul>
                     </div>
                     <p className="left-column-text">Despite these challenges, the final product is fully functional and successfully integrates all 10 features.</p>
                 </div>
-                <motion.video 
-                src={`${import.meta.env.BASE_URL}videos/PokedexDemo.mov`} 
-                alt="Demo Video" 
-                initial={{opacity: 0, y: 40}}
-                whileInView={{opacity: 1, y: 0}}
-                transition={{duration: 0.7, ease: "easeInOut"}}
-                viewport={{ once: true, amount: 0.3 }}
-                playsInline
-                muted
-                autoPlay
-                controls/>
             </div>
         </section>
     )
@@ -499,7 +562,7 @@ function Conclusion() {
                 <div className="two-column-grid">
                     <ul className="bulleted-list">
                         <li className="bullet-points">
-                            <span className="bullet-heading">SQL Mastery:</span> I gained a deep understanding of advanced SQL concepts, specifically how to use Joins and Subqueries to extract specific insights from large datasets.
+                            <span className="bullet-heading">SQL Mastery:</span> I gained a deep understanding of advanced SQL concepts, specifically how to use joins, aggregations, and subqueries to extract specific insights from large datasets.
                         </li>
                         <li className="bullet-points" style={{marginBottom: "0px"}}>
                             <span className="bullet-heading">Relational Thinking:</span> The project taught me how to break down a complex subject into a normalized database schema that is both scalable and logical.
@@ -507,10 +570,10 @@ function Conclusion() {
                     </ul>
                     <ul className="bulleted-list">
                         <li className="bullet-points">
-                            <span className="bullet-heading">Full-Stack Coordination:</span> I learned the importance of "API Contracts"—ensuring the backend returns data in a format that the frontend can easily consume.
+                            <span className="bullet-heading">Full-Stack Coordination:</span> I learned the importance of API contracts to ensure the backend returns data in a format that the frontend can easily consume.
                         </li>
                         <li className="bullet-points">
-                            <span className="bullet-heading">Team Collaboration:</span> Working in a group allowed us to leverage different strengths, such as Pokémon domain knowledge versus technical SQL optimization.
+                            <span className="bullet-heading">Team Collaboration:</span> Working in a group allowed us to leverage different strengths, such as Pokémon domain knowledge, SQL optimization, and frontend development skills.
                         </li>
                     </ul>
                 </div>
@@ -521,7 +584,7 @@ function Conclusion() {
                 <div className="two-column-grid">
                     <ul className="bulleted-list">
                         <li className="bullet-points">
-                            <span className="bullet-heading">Complete CRUD Functionality:</span> While the app currently allows for creating and reading entries, I would implement the "Update" and "Delete" functions for the "My Pokémon" page, allowing users to edit nicknames or remove Pokémon from their collection.
+                            <span className="bullet-heading">Complete CRUD Functionality:</span> While the app currently allows for creating and reading entries, I would implement update and delete functions for the "My Pokémon" page, allowing users to edit nicknames or remove Pokémon from their collection.
                         </li>
                         <li className="bullet-points" style={{marginBottom: "0px"}}>
                             <span className="bullet-heading">Enhanced Search Filtering:</span> I would expand the SQL logic for the main Pokédex to include more granular filters, such as searching by specific abilities, height/weight ranges, or base-stat thresholds.
@@ -529,15 +592,15 @@ function Conclusion() {
                     </ul>
                     <ul className="bulleted-list">
                         <li className="bullet-points">
-                            <span className="bullet-heading">UI Fluidity & Micro-interactions:</span> I would add subtle motions and micro-interactions such as smooth transitions for hover states and tags to make the interface feel more responsive and high-end.
+                            <span className="bullet-heading">UI Fluidity & Micro-interactions:</span> I would add subtle motions and micro-interactions such as smooth transitions for hover states and tags to make the interface feel more responsive and polished.
                         </li>
                         <li className="bullet-points">
-                            <span className="bullet-heading">Deployment & Performance:</span>My final step would be to deploy the application using a service like Railway or Heroku to make the live database accessible online, while refactoring the Node.js queries to improve loading speeds.
+                            <span className="bullet-heading">Deployment & Performance: </span>My final step would be to deploy the application using a service like Railway or Heroku to make the live database accessible online, while refactoring the Node.js queries to improve loading speeds.
                         </li>
                     </ul>
                 </div>
             </div>
-            <p className="bottom-line"><span className="bullet-heading">The Bottom Line:</span> This project transformed a complex dataset into a functional tool, proving that strategic database architecture and normalized schema design are the foundations of any high-performance web application.</p>
+            <p className="bottom-line"><span className="bullet-heading">The Bottom Line:</span> This project transformed a complex dataset into a functional tool, proving that strategic database architecture and schema design are the foundations of high-performance web applications.</p>
         </motion.section>
     )
 }

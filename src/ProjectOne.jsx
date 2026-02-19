@@ -48,16 +48,16 @@ function Hero() {
     return (
         <header className="viewport-content" 
         style={{
-        backgroundImage: `url(${import.meta.env.BASE_URL}pictures/bmwhomepagedesign.png)`, 
+        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url(${import.meta.env.BASE_URL}pictures/bmwhomepagedesign.png)`, 
         backgroundRepeat: "no-repeat", 
         backgroundSize: "cover",
         backgroundPosition: "50% 50%",
-        backgroundColor: "rgba(0, 0, 0, 0.7)",
+        backgroundColor: "rgba(0, 0, 0, 0.75)",
         backgroundBlendMode: "overlay"
         }}>
             <HeroNav />
             <div className="hero-text-container">
-                <h1 className="project-title">BMW Canada Homepage Redesign</h1>
+                <h1 className="project-title"><a href="https://mahdeek.github.io/BMW-Homepage-Redesign/" target="_blank">BMW Canada Homepage Redesign</a></h1>
                 <p className="project-caption">
                     A concept redesign of the BMW Canada homepage focused on elevating visual quality, 
                     improving user experience, and translating a luxury brand into a modern, immersive digital experience.
@@ -87,7 +87,7 @@ function Summary() {
                     <div className="problem-statement-container" style={{marginBottom: "32px"}}>
                         <h2 className="summary-headline">Problem</h2>
                         <p className="summary-text">
-                            Despite BMW’s reputation for 'The Ultimate Driving Machine,' their digital experience felt cluttered and dated. This disconnect between
+                            Despite BMW’s reputation as a luxury, high performance brand, their digital experience felt cluttered and dated. This disconnect between
                             the physical luxury of the vehicles and the online interface diluted brand prestige and created unnecessary cognitive load for users.
                         </p>
                     </div>
@@ -101,8 +101,8 @@ function Summary() {
                     </div>
                     <p className="motivation-text">
                         This project was a personal challenge to bridge high-end UI design with functional front-end development. Beyond the visual overhaul,
-                        I focused on building an end-to-end workflow—using React to handle complex media assets and ensuring a responsive, performant experience
-                        that maintains luxury aesthetics across all devices.
+                        I focused on building an end-to-end workflow. I used React and Framer Motion to handle media assets, responsiveness and animations, 
+                        ensuring the experience maintains the luxury aesthetic across all devices.
                     </p>
                 </div>
                 <div className="key-stats">
@@ -168,7 +168,7 @@ function Process() {
                         <h1 className="process-card-number">03</h1>
                         <h1 className="process-card-title">Design</h1>
                     </div>
-                    <p className="process-card-text">Crafting a video-first interface in Figma focused on motion and premium typography.</p>
+                    <p className="process-card-text">Creating a media-first interface in Figma focused on motion and brand typography.</p>
                 </motion.div>
                 <motion.div className="process-card" variants={item}>
                     <div className="card-title-container">
@@ -194,9 +194,9 @@ function Research() {
         <section className="content-container">
             <h1 className="project-heading">Research</h1>
             <p className="research-intro">
-                To define the standard for high-end digital showrooms, I conducted a competitive audit of luxury and performance brands. 
-                I looked at direct competitors like Mercedes-Benz and Porsche, while drawing heavy inspiration from 'hyper-luxury' brands like Bugatti, 
-                Koenigsegg, Rolls-Royce, and Bentley to identify the visual language of the ultra-premium market and apply those principles to solve the 
+                To define the standard for high-end digital experiences, I conducted a competitive audit of luxury and performance brands. 
+                I looked at direct competitors like Mercedes-Benz and Porsche, while drawing heavy inspiration from hyper-luxury brands like Bugatti, 
+                Koenigsegg, Rolls-Royce, and Bentley. This audit helped me identify the visual language of the ultra-premium market and apply those principles to solve the 
                 friction found on the current BMW Canada site.
             </p>
             <div className="key-insights-container">
@@ -204,26 +204,26 @@ function Research() {
                 <div className="two-column-grid">
                     <ul className="bulleted-list">
                         <li className="bullet-points">
-                            <span className="bullet-heading">Immersive Storytelling:</span> Leading brands use 4K hero loops with minimal copy. I adopted a video-first approach to evoke the emotional thrill 
+                            <span className="bullet-heading">Immersive Storytelling:</span> Leading brands use high definition hero video loops with minimal copy. I adopted a video-first approach to evoke the emotional thrill 
                             of driving before presenting technical specs.
                         </li>
                         <li className="bullet-points">
-                            <span className="bullet-heading">Low-Pressure Conversion:</span> Research showed that top-tier brands favor discovery over direct sales. I replaced transactional 'Shop' prompts with 
+                            <span className="bullet-heading">Low-Pressure Conversion:</span> My research showed that top-tier brands generally favor discovery over direct sales. I replaced transactional 'Shop' prompts with 
                             'Discover', aligning the CTA with a sense of exploration and prestige.
                         </li>
                         <li className="bullet-points" style={{marginBottom: "0px"}}>
-                            <span className="bullet-heading">Intentional Friction Reduction:</span> By implementing a desktop hamburger menu and center-aligned logo (patterns seen in Koenigsegg and Bentley), I 
+                            <span className="bullet-heading">Intentional Friction Reduction:</span> By implementing a desktop hamburger menu and center-aligned logo (patterns seen in Bugatti, Porsche, and Rolls-Royce), I 
                             cleared the visual noise and cognitive load that currently plagues the BMW Canada site.
                         </li>
                     </ul>
                     <ul className="bulleted-list">
                         <li className="bullet-points">
-                            <span className="bullet-heading">Dynamic Product Discovery:</span> I used a high-fidelity carousel to allow users to navigate the fleet without losing their place on the page, ensuring 
-                            every vehicle is presented with equal 'hero' importance.
+                            <span className="bullet-heading">Dynamic Product Discovery:</span> I used a high-fidelity carousel to allow users to navigate the range of models without losing their place on the page, giving
+                            every model the necessary breathing room to shine.
                         </li>
                         <li className="bullet-points">
-                            <span className="bullet-heading">Market-Driven Prioritization:</span> I ordered the carousel starting with the X-Series and 2-4 Series, prioritizing BMW Canada’s top-selling models to align 
-                            the user experience with real-world sales performance.
+                            <span className="bullet-heading">Market-Driven Prioritization:</span> I ordered the carousel by prioritizing BMW's top-selling models, starting with the X-Series and 2-4 Series, to align 
+                            the user experience with real-world sales performance and drive conversion.
                         </li>
                         <li className="bullet-points">
                             <span className="bullet-heading">Strategic Upselling:</span> I grouped the 3/4 and 7/8 series within the carousel to create a logical exploration path, subtly encouraging users to compare 
@@ -304,7 +304,7 @@ function Design() {
                         <p className="design-item-text">
                             I used a background video that shows driving performance and excitement to pair with BMW's slogan.
                             I also used a large font size and a blend mode to increase visibility on top of the video.
-                            Additionally, the format of the text makes it such that the video and slogan are seen first then the subheading and then the line leads from the subheading to the CTA.
+                            Additionally, the format of the text makes it such that the video and slogan are seen first, then the subheading, and then the line subtly leads the eye from the subheading to the CTA.
                         </p>
                     </motion.div>
                 </div>
@@ -320,8 +320,8 @@ function Design() {
                             Each model was paired with carefully selected imagery and video
                             that reflected its personality such as everyday travel for the 2 series,
                             luxury and artistic expression for the 7 and 8 series, or a futuristic vibe
-                            for the i series. Additionally, paginations dots were added for navigation and to
-                            let users know the number of carousel elements and their position within it allowing users
+                            for the i series. Additionally, pagination dots were added for navigation and to
+                            inform users of the number of elements and their position within the carousel allowing users
                             to navigate to the correct model with ease due to the logical and natural ordering of the models.
                         </p>
                     </motion.div>
@@ -351,12 +351,13 @@ function Design() {
                     transition={{duration: 0.7, ease: "easeInOut"}}
                     viewport={{ once: true, amount: 0 }}
                     >
-                        <h1 className="design-item-title">High-Octane Engagement</h1>
+                        <h1 className="design-item-title">Excitement Through Motion</h1>
                         <p className="design-item-text">
-                            For the vehicle search section, I used a full-width image of cars drifting
-                            in the snow to showcase BMW’s performance and handling. This image is meant to evoke
-                            emotions of excitement and desire to both own a BMW vehicle or to experience the thrill of
-                            pushing the limits of a high performance vehicle, similar to what is shown in the image.
+                            By showcasing a BMW mid-maneuver in a harsh environment, the design immediately communicates 
+                            superior handling and performance. Utilizing full width imagery provides the necessary breathing room
+                            for the high contrast between the snow and the cars to create a natural focal point, drawing
+                            users into the experience. Along with this sense of excitement and desire induced by the image, users are
+                            naturally encouraged to click through to vehicle discovery, aiming to increase sales performance.  
                         </p>
                     </motion.div>
                 </div>
@@ -370,8 +371,7 @@ function Design() {
                         <h1 className="design-item-title">Data Density vs. Clarity</h1>
                         <p className="design-item-text">
                             I grouped the current offers together instead of making separate full width cards to make
-                            it so that users can gather the information faster and more apparent of what offers are currently
-                            available.
+                            it easier for users to quickly scan and process the information, making the current offers more apparent.
                         </p>
                     </motion.div>
                     <motion.img 
@@ -426,16 +426,30 @@ function Development() {
                         <h1 className="project-subheading">Implementation Highlights</h1>
                         <ul className="bulleted-list">
                                 <li className="bullet-points">
-                                    <span className="bullet-heading">Device-Agnostic Design:</span> A fully responsive layout optimized for seamless viewing across mobile, tablet, and ultra-wide desktop displays.
+                                    <span className="bullet-heading">Responsive Design:</span> A fully responsive layout optimized for seamless viewing across mobile, tablet, and ultra-wide desktop displays.
                                 </li>
                                 <li className="bullet-points">
-                                    <span className="bullet-heading">Adaptive Media Interactions:</span> I engineered a custom model carousel that intelligently toggles between autoplay loops on mobile and hover-triggered playback on desktop to optimize user engagement and data usage.
+                                    <span className="bullet-heading">Adaptive Media Interactions:</span> I engineered a custom model carousel that toggles between autoplay loops on mobile and hover-triggered playback on desktop to optimize user engagement and ensure delivery of the full experience.
                                 </li>
                                 <li className="bullet-points">
-                                    <span className="bullet-heading">Modular Component Architecture:</span> Developed a library of reusable React components, ensuring a scalable and maintainable codebase.
+                                    <span className="bullet-heading">Modular Component Architecture:</span> I developed a library of reusable React components, ensuring a scalable and maintainable codebase.
                                 </li>
                         </ul>
                     </div>
+                    </div>
+                    <motion.video
+                    src={`${import.meta.env.BASE_URL}videos/BMWDemo.mp4`} 
+                    alt="Demo Video" 
+                    initial={{opacity: 0, y: 40}}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{duration: 0.7, ease: "easeInOut"}}
+                    viewport={{ once: true, amount: 0.3 }}
+                    autoPlay
+                    muted
+                    playsInline
+                    controls
+                    />
+                    <div className="development-text">
                     <div className="technical-challenges">
                         <h1 className="project-subheading">Technical Challenges</h1>
                         <ul className="bulleted-list">
@@ -443,27 +457,15 @@ function Development() {
                                     <span className="bullet-heading">Synchronous Motion:</span> Managing the state and responsive behavior of a self-scrolling carousel required precise logic to ensure smooth transitions across varying screen widths.
                                 </li>
                                 <li className="bullet-points">
-                                    <span className="bullet-heading">Interaction Parity: </span> Normalizing video playback behaviors between touch-based mobile browsers and cursor-based desktop environments to maintain a consistent brand experience.
+                                    <span className="bullet-heading">Model Interaction:</span> Normalizing video playback behaviors between touch-based mobile browsers and cursor-based desktop environments to maintain a consistent brand experience.
                                 </li>
                                 <li className="bullet-points">
-                                    <span className="bullet-heading">Deployment Constraints: </span> Hosting a media-heavy project on GitHub Pages introduced latency challenges; I addressed this by prioritizing asset loading order to maintain a functional "First Contentful Paint."
+                                    <span className="bullet-heading">Deployment Constraints:</span> Hosting a media-heavy project on GitHub Pages introduced latency challenges; I addressed this by prioritizing asset loading order to ensure functional behavior before aesthetic interactions.
                                 </li>
                         </ul>
                     </div>
                     <p className="left-column-text">Despite these challenges, the final product is fully functional and closely matches the original design intent.</p>
                 </div>
-                <motion.video
-                src={`${import.meta.env.BASE_URL}videos/BMWDemo.mp4`} 
-                alt="Demo Video" 
-                initial={{opacity: 0, y: 40}}
-                whileInView={{opacity: 1, y: 0}}
-                transition={{duration: 0.7, ease: "easeInOut"}}
-                viewport={{ once: true, amount: 0.3 }}
-                autoPlay
-                muted
-                playsInline
-                controls
-                />
             </div>
         </section>
     )
@@ -479,24 +481,28 @@ function Conclusion() {
         viewport={{ once: true, amount: 0.2 }}
         >
             <h1 className="project-heading">Conclusion & Final Results</h1>
-            <p className="conclusion-intro">The BMW concept redesign successfully bridges the gap between digital utility and luxury prestige. By stripping away visual clutter and prioritizing high-fidelity motion, the platform now reflects the 'Ultimate Driving Machine' philosophy, presenting BMW as a modern, performance-driven brand.</p>
+            <p className="conclusion-intro">
+                The BMW concept redesign successfully bridges the gap between digital utility and luxury prestige. 
+                By stripping away visual clutter and prioritizing high-fidelity motion, the platform now reflects 
+                the brand quality that BMW is known for by presenting BMW as a modern, performance-driven brand.
+            </p>
             <div className="growth-container">
                 <h1 className="project-subheading">Key Takeaways & Growth</h1>
                 <div className="two-column-grid">
                     <ul className="bulleted-list">
                         <li className="bullet-points">
-                            <span className="bullet-heading">Luxury UX Strategy:</span> I learned to move beyond 'functional' design to 'emotional' design—using white space, motion, and typography to evoke a feeling of exclusivity.
+                            <span className="bullet-heading">Luxury UX Strategy:</span> I learned to move beyond 'functional' design to 'emotional' design by using white space, motion, media, and typography to evoke a feeling of exclusivity.
                         </li>
                         <li className="bullet-points" style={{marginBottom: "0px"}}>
-                            <span className="bullet-heading">Technical Fidelity:</span> This project pushed my React skills, specifically in managing complex interaction states and ensuring high-resolution video parity across device types.
+                            <span className="bullet-heading">Technical Fidelity:</span> This project pushed my React skills, specifically in managing complex interaction states and ensuring high-resolution video playback across device types.
                         </li>
                     </ul>
                     <ul className="bulleted-list">
                         <li className="bullet-points">
-                            <span className="bullet-heading">Brand Integrity:</span> I gained a deeper appreciation for the 'Brand-Legal' balance, learning how to select license-compliant assets that maintain a proprietary aesthetic.
+                            <span className="bullet-heading">Brand Integrity:</span> I gained a deeper appreciation for the balance between brand design and legal limitations. I learned how to select license-compliant assets that maintain a proprietary aesthetic.
                         </li>
                         <li className="bullet-points">
-                            <span className="bullet-heading">Performance Awareness:</span> Navigating the weight of 4K assets has significantly sharpened my focus on front-end optimization and the critical nature of asset-loading strategies.
+                            <span className="bullet-heading">Performance Awareness:</span> Navigating the burden of high definition assets has significantly sharpened my focus on front-end optimization and the importance of asset-loading and asset-management strategies.
                         </li>
                     </ul>
                 </div>
@@ -510,7 +516,7 @@ function Conclusion() {
                             <span className="bullet-heading">Brand Alignment & Asset Integration:</span> I would collaborate with the BMW Canada brand team to transition placeholders to brand-certified visuals and move from Titillium Web to the proprietary BMW Type Next typeface, ensuring 100% visual compliance with the global brand ecosystem.
                         </li>
                         <li className="bullet-points" style={{marginBottom: "0px"}}>
-                            <span className="bullet-heading">Asset & Performance Engineering:</span> To ensure a seamless experience, I would compress all media (using WebP and optimized video bitrates) and implement lazy-loading to achieve sub-second 'Time to Interactive.'
+                            <span className="bullet-heading">Asset & Performance Engineering:</span> To ensure a seamless experience, I would compress all media (using WebP and optimized video bitrates) and implement lazy-loading to achieve sub-second time to interactive.
                         </li>
                     </ul>
                     <ul className="bulleted-list">
@@ -518,12 +524,12 @@ function Conclusion() {
                             <span className="bullet-heading">Data-Driven Iteration:</span> By integrating analytics, I would track user engagement across the video modules to identify which models drive the most conversions, allowing for data-backed UI refinements.
                         </li>
                         <li className="bullet-points">
-                            <span className="bullet-heading">Usability Validation:</span> I would conduct structured usability testing to ensure the 'minimalist' navigation remains intuitive for all user demographics, refining the flow based on real-world behavior.
+                            <span className="bullet-heading">Usability Validation:</span> I would conduct structured usability testing to ensure the minimalist navigation remains intuitive for all user demographics and refine the flow based on real-world behavior and data.
                         </li>
                     </ul>
                 </div>
             </div>
-            <p className="bottom-line"><span className="bullet-heading">The Bottom Line:</span> This project reinforced the value of combining high-end visual storytelling with thoughtful development to create a digital experience that feels as premium as the 'Ultimate Driving Machine'."</p>
+            <p className="bottom-line"><span className="bullet-heading">The Bottom Line:</span> This project reinforced the value of combining high-end visual storytelling with thoughtful development to create a digital experience that aligns with the premium brand image built by BMW across decades.</p>
         </motion.section>
     )
 }

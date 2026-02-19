@@ -35,7 +35,7 @@ function ProjectFour() {
             <Research />
             <Wireframing />
             <Design />
-            <Development />
+            {/* <Development /> */}
             <Conclusion />
             <Footer />
         </PageTransition>
@@ -48,7 +48,7 @@ function Hero() {
     return (
         <header className="viewport-content" 
         style={{
-        backgroundImage: `url(${import.meta.env.BASE_URL}pictures/receiptlyimage.png)`, 
+        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url(${import.meta.env.BASE_URL}pictures/receiptlyimage.png)`, 
         backgroundRepeat: "no-repeat", 
         backgroundSize: "cover",
         backgroundPosition: "50% 50%",
@@ -57,7 +57,7 @@ function Hero() {
         }}>
             <HeroNav />
             <div className="hero-text-container">
-                <h1 className="project-title">Receiptly</h1>
+                <h1 className="project-title"><a href="https://www.figma.com/design/6BHcFUseVPzOOqPQVDsEI2/Digital-Receipt-App?node-id=0-1&t=wNKi2dWF5WCP4JJj-1" target="_blank">Receiptly</a></h1>
                 <p className="project-caption">
                     A comprehensive financial ecosystem designed to simplify expense management through automated data extraction, intuitive categorization, and a modernist UI.
                 </p>
@@ -92,11 +92,16 @@ function Summary() {
                     <div className="solution-statement-container" style={{marginBottom: "48px"}}>
                         <h2 className="summary-headline">Solution</h2>
                         <p className="summary-text">
-                            I designed a multi-page financial ecosystem that prioritizes "at-a-glance" awareness with a premium, modernist aesthetic. Beyond the Figma design, I built the core layouts using SwiftUI to ensure my design vision was technically feasible in a native iOS environment. My goal was to create a platform that feels as high-end as a paid SaaS product but is designed as a free, accessible tool.
+                            I designed a multi-page financial ecosystem that prioritizes information at a glance with a premium 
+                            modernist aesthetic. Beyond the Figma design, I built some core screens using SwiftUI to ensure my design 
+                            vision was technically feasible in a native iOS environment. My goal was to create a platform that feels 
+                            as high-end as a paid SaaS product but is designed as a free and easily accessible tool.
                         </p>
                     </div>
                     <p className="motivation-text">
-                        This project was a challenge to distill complex data into a "clean and modern" layout. Beyond the design, I approached this with a developer’s mindset, planning the architecture for a future build that would provide a high-quality, free alternative to the current market offerings.
+                        This project was a challenge to distill complex data into a clean and modern layout. Beyond the design, 
+                        I approached this with a developer’s mindset, planning the architecture for a future build that would provide 
+                        a high-quality and free alternative to the current market offerings.
                     </p>
                 </div>
                 <div className="key-stats">
@@ -148,7 +153,7 @@ function Process() {
                         <h1 className="process-card-number">01</h1>
                         <h1 className="process-card-title">Audit</h1>
                     </div>
-                    <p className="process-card-text">Analyzing the competitive landscape to identify the "paywalls" that prevent users from accessing high-quality financial tools.</p>
+                    <p className="process-card-text">Analyzing the competitive landscape to identify the required features and paywalls that prevent users from accessing premium features.</p>
                 </motion.div>
                 <motion.div className="process-card" variants={item}>
                     <div className="card-title-container">
@@ -162,7 +167,7 @@ function Process() {
                         <h1 className="process-card-number">03</h1>
                         <h1 className="process-card-title">Design</h1>
                     </div>
-                    <p className="process-card-text">Crafting a clean, Figtree-based UI in Figma that uses "soft-modernism" to make data-heavy pages feel approachable.</p>
+                    <p className="process-card-text">Crafting a clean UI with Figtree in Figma that uses soft-modernism to make data-heavy pages feel approachable.</p>
                 </motion.div>
                 <motion.div className="process-card" variants={item}>
                     <div className="card-title-container">
@@ -181,31 +186,47 @@ function Research() {
         <section className="content-container">
             <h1 className="project-heading">Research</h1>
             <p className="research-intro">
-                My research began with a competitive audit of the current financial app landscape. I found a significant gap in the market: apps that offered high-end UX and automated categorization were almost exclusively "Pro" or subscription-based, while free tools felt cluttered and unintuitive. I realized there was a clear opportunity for a Free-to-Use MVP that didn't compromise on design standards. I drew inspiration from modern fintech interfaces but simplified the user flow to focus on the essential features—receipt tracking and monthly budgeting—ensuring the app remained lightweight and focused.
+                My research began with a competitive audit of the current financial app landscape. I found a significant gap 
+                in the market: apps that offered high-end UX and automated categorization were almost exclusively pro or 
+                subscription-based, while free tools felt cluttered, unintuitive, or lacked key features. I realized there 
+                was a clear opportunity for a free MVP that didn't compromise on design standards. I drew inspiration 
+                from modern fintech interfaces but simplified the user flow to focus on the essential features such as receipt 
+                tracking and monthly budgeting to ensure the app remained lightweight and approachable.
             </p>
             <div className="key-insights-container">
                 <h1 className="project-subheading">Key Decisions & Insights</h1>
                 <div className="two-column-grid">
                     <ul className="bulleted-list">
                         <li className="bullet-points">
-                            <span className="bullet-heading">The "At-A-Glance" Dashboard:</span> I designed the primary landing page to act as a command center, displaying the total monthly spend, top three spending categories, and a quick-access scrollable container for recent receipts.
+                            <span className="bullet-heading">Summarized Dashboard: </span> 
+                            I designed the primary landing page to act as a command center, displaying the total monthly spending, 
+                            top three spending categories, and a quick-access scrollable container for recent receipts.
                         </li>
                         <li className="bullet-points">
-                            <span className="bullet-heading">Granular Expense Intelligence:</span> The Expenses page combines a calendar heatmap with a percentage-based category breakdown. This allows users to see not just how much they spent, but the frequency and proportion of their habits.
+                            <span className="bullet-heading">Expense Intelligence: </span> 
+                            The expenses page combines a calendar heatmap with a percentage-based category breakdown. This allows users 
+                            to see not just how much they spent, but the frequency and proportion of their habits.
                         </li>
                         <li className="bullet-points" style={{marginBottom: "0px"}}>
-                            <span className="bullet-heading">Receipt Transformation Logic:</span> I designed a flow where messy physical receipts are replaced by organized digital layouts. Clicking a receipt opens a clean, digital summary of store, date, and price rather than just a raw photo.
+                            <span className="bullet-heading">Receipt Transformation Logic: </span> 
+                            I designed a flow where messy physical receipts are replaced by organized digital layouts. Clicking a receipt 
+                            opens a clean digital summary of the receipt rather than just a raw photo.
                         </li>
                     </ul>
                     <ul className="bulleted-list">
                         <li className="bullet-points">
-                            <span className="bullet-heading">Proactive Budgeting:</span> I developed a Budget page where users can create custom categories and set spending limits. Visual progress bars and percentages show how close a user is to their limit or if they've exceeded it, encouraging proactive financial discipline.
+                            <span className="bullet-heading">Proactive Budgeting: </span> 
+                            I developed a budget page where users can create custom categories and set spending limits. Visual progress bars 
+                            and percentages show how close a user is to their limit or if they've exceeded it, encouraging proactive 
+                            financial discipline.
                         </li>
                         <li className="bullet-points">
-                            <span className="bullet-heading">Filter-First Gallery:</span> The Receipt Gallery was built for high-speed retrieval, allowing users to filter history by category, store, price, or date, ensuring that expense reporting is stress-free.
+                            <span className="bullet-heading">Filter-First Gallery: </span> 
+                            The receipt gallery was built for high-speed retrieval, allowing users to filter history by category, store, price, 
+                            or date, ensuring that expense reporting is efficient and stress-free.
                         </li>
                         <li className="bullet-points">
-                            <span className="bullet-heading">Trust Theory Palette:</span> Using blue as a primary color signifies stability and trust, while red is used sparingly for overspending alerts and log-out actions to ensure clear visual communication.
+                            <span className="bullet-heading">Trust Inducing Palette:</span> Using blue as a primary color signifies stability and trust, while red is used sparingly for overspending alerts and log-out actions to ensure clear visual communication.
                         </li>
                     </ul>
                 </div>
@@ -281,7 +302,7 @@ function Design() {
                         <h1 className="design-item-title">High-Level Financial Awareness</h1>
                         <p className="design-item-text">
                             The primary landing page utilizes a card-based layout to provide an immediate snapshot of financial health. 
-                            At the top, a prominent primary card displays the total monthly spend alongside the "Top 3 Categories" to drive instant awareness.
+                            At the top, a prominent primary card displays the total monthly spend alongside the top 3 categories to drive instant awareness.
                             Below, a scrollable container features recent transactions, using soft shadows and high-contrast typography to distinguish between 
                             store names, dates, and amounts. The bottom navigation bar uses clear, minimalist iconography to anchor the user experience.
                         </p>
@@ -332,8 +353,7 @@ function Design() {
                         <p className="design-item-text">
                             This view showcases the initial data-entry phase, featuring a high-resolution image of a physical receipt. The interface is 
                             intentionally sparse, placing the focus entirely on the captured document. A simple header provides the date and time of 
-                            the capture, while minimalist bottom icons (Export, Favorite, Delete) allow for immediate organization before the app 
-                            processes the data.
+                            the capture, while minimalist bottom icons (Export, Favorite, Delete) allow for immediate and frictionless organization.
                         </p>
                     </motion.div>
                 </div>
@@ -347,9 +367,9 @@ function Design() {
                         <h1 className="design-item-title">Proactive Budget Management</h1>
                         <p className="design-item-text">
                             The Budgeting interface is designed for proactive financial management. Each category is presented as a distinct module 
-                            showing the current spend relative to the set limit. A dynamic progress bar system provides instant visual feedback—using 
-                            a calm blue for healthy spending and a striking red for over-budget categories (like "Dining Out"). The "Add Category" button 
-                            is prominently placed to encourage users to customize their tracking experience.
+                            showing the current spend relative to the set limit. A dynamic progress bar system provides instant visual feedback by using 
+                            a calm blue for healthy spending and a striking red for over-budget categories (such as "Dining Out" in the mockup). The "Add Category" button 
+                            is prominently placed to encourage users to customize their budgeting experience.
                         </p>
                     </motion.div>
                     <motion.img 
@@ -378,12 +398,11 @@ function Design() {
                     transition={{duration: 0.7, ease: "easeInOut"}}
                     viewport={{ once: true, amount: 0 }}
                     >
-                        <h1 className="design-item-title">Intuitive Administrative UX</h1>
+                        <h1 className="design-item-title">Intuitive Administrative Experience</h1>
                         <p className="design-item-text">
-                            The Settings page maintains the app's minimalist aesthetic with a focus on clean input fields and legibility. It organizes 
-                            user information—Full Name, Email, and Security—into a single-column layout with generous white space. Secondary actions 
-                            like "Help," "About," and the high-visibility "Delete Account" action in red ensure that administrative tasks are intuitive 
-                            and easy to navigate.
+                            The settings page maintains the app's minimalist aesthetic with a focus on clean input fields and legibility. It organizes 
+                            user information (full name, email, and password) into a single-column layout with generous white space. Secondary actions 
+                            such as help, about, and the delete account action in red ensure that administrative tasks are intuitive and easy to navigate.
                         </p>
                     </motion.div>
                 </div>
@@ -396,7 +415,7 @@ function Design() {
                     >
                         <h1 className="design-item-title">Structural Data Transformation</h1>
                         <p className="design-item-text">
-                            This screen demonstrates the "transformation" logic of the app. It replaces the messy, physical photo with a structured digital summary. 
+                            This screen demonstrates the transformation logic of the app. It replaces the messy physical photo with a structured digital summary. 
                             The design uses a clean table format to list individual items, quantities, and prices, followed by a clear subtotal and tax breakdown. 
                             By standardizing the information into this clean layout, the app removes visual clutter and makes historical expense review effortless.
                         </p>
@@ -474,21 +493,27 @@ function Conclusion() {
         viewport={{ once: true, amount: 0.2 }}
         >
             <h1 className="project-heading">Conclusion & Final Results</h1>
-            <p className="conclusion-intro">The Finance Flow concept successfully demonstrates that financial tools do not have to be visually dense or expensive to be powerful. By combining a "soft-modernist" UI with intuitive data visualizations like the calendar heatmap, the project bridges the gap between complex expense tracking and a frictionless user experience. Building the core layouts in SwiftUI further validated the design's feasibility, proving that high-end, professional-grade budgeting tools can be made accessible and intuitive for the everyday user.</p>
+            <p className="conclusion-intro">The concept successfully demonstrates that financial tools do not have to be visually dense or expensive to be powerful. 
+                By combining a soft-modernist UI with intuitive data visualizations like the calendar heatmap, the project bridges the gap between complex expense 
+                tracking and a frictionless user experience. Building the core layouts in SwiftUI further validated the design's feasibility, proving that high-end 
+                professional-grade budgeting tools can be made accessible and intuitive for the everyday user.
+            </p>
             <div className="growth-container">
                 <h1 className="project-subheading">Key Takeaways & Growth</h1>
                 <div className="two-column-grid">
                     <ul className="bulleted-list">
                         <li className="bullet-points">
-                            <span className="bullet-heading">Bridging Design and Code:</span> Translating my own Figma designs into SwiftUI taught me exactly how much "padding" and "spacing" logic is required to make a design feel native rather than just a web-view.
+                            <span className="bullet-heading">Bridging Design and Code: </span> 
+                            Translating my Figma designs into SwiftUI taught me exactly how important spacing and contrast were
+                            to make a design feel native and alive on various screens sizes and devices.
                         </li>
                         <li className="bullet-points" style={{marginBottom: "0px"}}>
-                            <span className="bullet-heading">Data Visualization Strategy:</span> Designing the calendar heatmap taught me how to present "boring" data in a creative way that adds actual value to the user’s daily routine.
+                            <span className="bullet-heading">Data Visualization Strategy:</span> Designing the calendar heatmap taught me how to present boring data in a creative way that adds actual value to the user’s daily routine.
                         </li>
                     </ul>
                     <ul className="bulleted-list">
                         <li className="bullet-points">
-                            <span className="bullet-heading">Color Theory in Utility:</span> I learned how to use a restricted color palette to drive user behavior—using blue to build confidence and red as a high-impact signal for warnings or errors.
+                            <span className="bullet-heading">Color Theory in Utility:</span> I learned how to use a restricted color palette to drive user behavior by utilizing blue to build confidence and trust while red was reserved as a high-impact signal for warnings or errors.
                         </li>
                         <li className="bullet-points">
                             <span className="bullet-heading">MVP Prioritization:</span> This project reinforced the importance of focusing on core features (categorization and high-level summaries) before adding secondary complexity, ensuring the product remains lightweight.
@@ -498,14 +523,14 @@ function Conclusion() {
             </div>
             <div className="next-steps-container">
                 <h1 className="project-subheading">Next Steps</h1>
-                <p className="next-steps-intro">If this were a production-ready client project, my next phase would focus on turning these static layouts into a fully functional reality:</p>
+                <p className="next-steps-intro">If this were a production-ready client project, my next phase would focus on turning these static layouts into a fully functional prototype:</p>
                 <div className="two-column-grid">
                     <ul className="bulleted-list">
                         <li className="bullet-points">
                             <span className="bullet-heading">Functional Prototyping & Logic:</span> I would transition from static views to a functional prototype by implementing @State and @Binding to connect the navigation and allow for interactive user flows.
                         </li>
                         <li className="bullet-points" style={{marginBottom: "0px"}}>
-                            <span className="bullet-heading">Backend & Persistence:</span> I would integrate a database (like SwiftData or Firebase) to allow for persistent storage, enabling the "Budget" and "Gallery" pages to handle real-time user data.
+                            <span className="bullet-heading">Backend & Persistence:</span> I would integrate a database (like SwiftData or Firebase) to allow for persistent storage of metadate while storing images locally, enabling the budget and gallery pages to handle real-time user data.
                         </li>
                     </ul>
                     <ul className="bulleted-list">
@@ -513,12 +538,12 @@ function Conclusion() {
                             <span className="bullet-heading">Vision Framework OCR:</span> I would implement Apple’s Vision Framework to perform on-device OCR, allowing the app to extract text from receipt photos and automatically populate the digital layouts I've designed.
                         </li>
                         <li className="bullet-points">
-                            <span className="bullet-heading">Full-App Build-Out:</span> I would develop the remaining pages, including the complete settings menu and the integrated support/FAQ sections, to bring the entire ecosystem to a "v1.0" launch state.
+                            <span className="bullet-heading">Full-App Build-Out:</span> I would develop the remaining pages, including the complete settings menu and the integrated support and FAQ sections, to bring the entire ecosystem to a version 1 launch state.
                         </li>
                     </ul>
                 </div>
             </div>
-            <p className="bottom-line"><span className="bullet-heading">The Bottom Line:</span> This project reinforced the value of "Clarity over Clutter"—proving that high-end design and native development can democratize financial tools, making professional-grade budgeting accessible to everyone.</p>
+            <p className="bottom-line"><span className="bullet-heading">The Bottom Line:</span> This project reinforced the value of clarity over clutter by proving that high-end design and native development can simplify financial tools, making professional-grade budgeting accessible to everyone.</p>
         </motion.section>
     )
 }

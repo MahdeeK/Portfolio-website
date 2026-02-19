@@ -40,6 +40,14 @@
     opacity: 0.8;
 }
 
+.nav-links li:has(.link-active),
+.mobile-nav li:has(.link-active) {
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+    padding-bottom: 2px;
+    cursor: default;
+    pointer-events: none;
+}
+
 .hamburger-btn {
     display: none;
 }

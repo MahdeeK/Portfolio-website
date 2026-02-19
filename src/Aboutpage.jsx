@@ -62,7 +62,7 @@ function AboutMe () {
           Hi, I’m Mahdee. I’m a fourth-year CS student at Waterloo and a full-stack builder based in Canada.
         </p>
         <p className="about-large-text" style={{ textAlign:"center" }}>
-          I’ve found that the best digital products are built when the design and the code aren't treated as separate things. I bridge that gap by owning the entire process.
+          I’ve found that the best digital products are built when the design and code aren't treated as separate things. I bridge that gap through my end-to-end skillset.
         </p>
         <p className="about-large-text" style={{ textAlign:"center" }}>
           I don't just solve business problems; I also conceptualize, design, and deliver a complete, functional product ready for launch.
@@ -111,16 +111,21 @@ function Hobbies () {
         </p>
         <p className="body-text about-text">
           When I step away from work, I’m usually diving into the series featured in my hero section. While Ghost of Tsushima is my personal 
-          favorite for its stunning world and compelling characters, I have a deep appreciation for the diverse strengths of each of these franchises. Whether 
+          favorite for its stunning world and compelling characters, I have a deep appreciation for the strengths of each of these franchises. Whether 
           it’s the imaginative world-building of Horizon and Zelda, the challenging combat of Sekiro, or the rich historical settings of the Red Dead 
           Redemption and Assassin’s Creed series, I love exploring and seeing how these worlds are crafted.
         </p>
         <p className="body-text about-text">
           I am also particularly drawn to the "hero fantasy" perfected by the Batman Arkham and Spider-Man series, which excel at creating 
-          an immersive, character-driven experience. This appreciation and excitement extends to the future of as well, which is why 
+          an immersive, character-driven experience. This appreciation and excitement extends to the future as well, which is why 
           I’ve included glimpses of titles I am highly anticipating, like 007: First Light and Phantom Blade 0, in the visuals of this site.
         </p>
         <p className="body-text about-text">
+          Beyond these narrative journeys, I’m a dedicated Valorant player and follower of the VCT circuit. I’m drawn to the high-stakes 
+          strategy and mechanical skill of competitive play, and I find immense value in analyzing professional matches by studying how 
+          professionals perceive the game and react to unexpected situations to improve my tactical thinking.
+        </p>
+        <p className="body-text about-text internship">
           I am currently seeking internships where I can apply my holistic skill set to build innovative, impactful digital products that 
           drive growth and solve user problems. I thrive in environments that value innovation, strategic design, and technical expertise.
         </p>
