@@ -7,7 +7,8 @@ html {
 body {
     background-color: black;
     color: white;
-    font-family: "Uncut Sans regular", sans-serif;
+    font-family: "Fragment Light", sans-serif;
+    font-weight: 400;
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -38,11 +39,48 @@ img {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
-    font-family: "Uncut Sans bold", sans-serif;
+    font-family: "Fragment", sans-serif;
+    font-weight: 400;
 }
 
-span {
-    font-family: "Uncut Sans Regular", sans-serif;
+@font-face {
+    font-family: 'Fragment';
+    src: url('/fonts/PPFragment-SansRegular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fragment Italic';
+    src: url('/fonts/PPFragment-SansRegularitalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fragment Light';
+    src: url('/fonts/PPFragment-SansLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fragment Bold';
+    src: url('/fonts/PPFragment-SansExtraBold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fragment Bold Italic';
+    src: url('/fonts/PPFragment-SansExtraBoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 .link-active {

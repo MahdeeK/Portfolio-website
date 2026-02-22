@@ -21,6 +21,7 @@
 }
 
 .project-title {
+    font-family: "Fragment Italic", sans-serif;
     font-size: clamp(24px, 5vw, 64px);
     text-align: center;
     text-decoration: underline;
@@ -188,7 +189,7 @@
 }
 
 .bullet-heading {
-    font-weight: 600;
+    font-family: "Fragment", sans-serif;
 }
 
 .image-gallery {

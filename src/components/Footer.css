@@ -1,6 +1,6 @@
 .large-text {
   font-size: clamp(21px, 6vw, 72px);
-  font-family: "Uncut Sans Bold", sans-serif;
+  font-family: "Fragment Bold Italic", sans-serif;
   text-align: center;
   margin: 0;
   white-space: nowrap;
@@ -56,7 +56,7 @@
 }
 
 .footer-links li:has(.link-active) {
-    border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+    border-bottom: 2px solid hsla(0, 0%, 100%, 0.5);
     padding-bottom: 2px;
     cursor: default;
     pointer-events: none;

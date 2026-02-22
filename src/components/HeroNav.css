@@ -10,9 +10,8 @@
 
 .logo {
     display: flex;
-    font-family: 'uncut sans regular', sans-serif;
+    font-family: 'Fragment Light', sans-serif;
     font-size: clamp(24px, 3vw, 32px);
-    font-weight: 400;
     padding: 0;
     margin-left: clamp(16px, 3vw, 32px);
     line-height: 0.9;
@@ -42,7 +41,7 @@
 
 .nav-links li:has(.link-active),
 .mobile-nav li:has(.link-active) {
-    border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+    border-bottom: 2px solid hsla(0, 0%, 100%, 0.5);
     padding-bottom: 2px;
     cursor: default;
     pointer-events: none;
