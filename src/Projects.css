@@ -83,6 +83,7 @@
 .summary-links {
     opacity: 1;
     transition: all 0.4s ease;
+    text-decoration: underline;
 }
 
 .summary-links:hover {

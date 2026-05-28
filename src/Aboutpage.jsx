@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Footer from './components/Footer.jsx';
 import HeroNav from './components/HeroNav.jsx';
 import PageTransition from './components/PageTransition.jsx';
+import AboutHeader from './components/AboutHeader.jsx';
 
 function Aboutpage() {
   return (
@@ -76,6 +77,7 @@ function Strategy () {
   return (
     <section className="content-wrapper">
       <div className="centred-container">
+        <AboutHeader number="01" sectionTitle="Skillset"/>
         <p className="body-text about-text">
           My dual skillset allows me to ensure total continuity from conception to deployment, minimizing points of friction and 
           maximizing efficiency across the product lifecycle. My approach to design is centered on crafting a compelling story for the user, 
@@ -104,6 +106,7 @@ function Hobbies () {
   return (
     <section className="content-wrapper page-end">
       <div className="centred-container">
+        <AboutHeader number="02" sectionTitle="Hobbies"/>
         <p className="body-text about-text">
           Outside of work and school, I spend my time exploring history, engaging in intellectual discourse, and cooking. 
           However, my biggest passion is gaming, specifically story-driven RPGs and immersive action-adventure series. 
@@ -120,12 +123,13 @@ function Hobbies () {
           an immersive, character-driven experience. This appreciation and excitement extends to the future as well, which is why 
           I’ve included glimpses of titles I am highly anticipating, like 007: First Light and Phantom Blade 0, in the visuals of this site.
         </p>
-        <p className="body-text about-text">
+        <p className="body-text about-text" style={{paddingBottom: "24px"}}>
           Beyond these narrative journeys, I’m a dedicated Valorant player and follower of the VCT circuit. I’m drawn to the high-stakes 
           strategy and mechanical skill of competitive play, and I find immense value in analyzing professional matches by studying how 
           professionals perceive the game and react to unexpected situations to improve my tactical thinking.
         </p>
-        <p className="body-text about-text internship">
+        <AboutHeader number="03" sectionTitle="Goals"/>
+        <p className="body-text about-text">
           I am currently seeking internships where I can apply my holistic skill set to build innovative, impactful digital products that 
           drive growth and solve user problems. I thrive in environments that value innovation, strategic design, and technical expertise.
         </p>

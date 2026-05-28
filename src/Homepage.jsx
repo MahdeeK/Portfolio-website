@@ -17,7 +17,7 @@ function Homepage() {
 
 export default Homepage
 
-function Hero () {
+/* function Hero () {
   return (
     <header className="viewport-content" id="home">
       <HeroNav />
@@ -25,6 +25,28 @@ function Hero () {
         <div className="hero-text">
           <h1 className="full-name">MAHDEE KHANDOKAR</h1>
           <p className="title">Hybrid Designer & Developer. I bridge the gap between creative vision and technical execution to deliver end-to-end digital products. Currently seeking 2026 Internship opportunities.</p>
+        </div>
+      </div>
+    </header>
+  )
+} */
+
+function Hero () {
+  return (
+    <header className="viewport-content" id="home">
+      <HeroNav />
+      <div className="hero-content">
+        <div className="name-container">
+          <p className="firstname">MAHDEE</p>
+          <p className="lastname">KHANDOKAR</p>
+        </div>
+        <div className="title-container">
+          <div className="horizontal-line"></div>
+          <div className="titles">
+            <p>Developer</p>
+            <p>Designer</p>
+            <p>Seeking Fall 2026 Internships</p>
+          </div>
         </div>
       </div>
     </header>

@@ -1,5 +1,5 @@
 .large-text {
-  font-size: clamp(21px, 6vw, 72px);
+  font-size: clamp(19px, 6vw, 72px);
   font-family: "Fragment Bold Italic", sans-serif;
   text-align: center;
   margin: 0;
@@ -55,7 +55,7 @@
   }
 }
 
-.footer-links li:has(.link-active) {
+.footer-links .link-active {
     border-bottom: 2px solid hsla(0, 0%, 100%, 0.5);
     padding-bottom: 2px;
     cursor: default;
