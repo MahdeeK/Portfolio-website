@@ -33,7 +33,8 @@ export default Homepage
 
 function Hero () {
   return (
-    <header className="viewport-content" id="home">
+    <header className="viewport-content">
+      <video src={`${import.meta.env.BASE_URL}/videos/HeroBackground.mp4`} className="hero-video" autoPlay playsInline loop muted></video>
       <HeroNav />
       <div className="hero-content">
         <div className="name-container">
